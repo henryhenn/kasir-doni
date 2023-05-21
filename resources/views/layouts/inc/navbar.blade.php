@@ -6,10 +6,12 @@
         </li>
         @if(request()->routeIs('cart.index'))
             <li class="nav-item">
-                <a href="?kategori=makanan" class="nav-link">Makanan</a>
+                <a href="?kategori=makanan"
+                   class="nav-link {{request('kategori') === 'makanan' ? 'active' : ''}}">Makanan</a>
             </li>
             <li class="nav-item">
-                <a href="?kategori=minuman" class="nav-link">Minuman</a>
+                <a href="?kategori=minuman"
+                   class="nav-link {{request('kategori') === 'minuman' ? 'active' : ''}}">Minuman</a>
             </li>
         @endif
     </ul>
